@@ -1,65 +1,65 @@
 ---
-sidebar_position: 0
+always-real-ip=*.任天堂。net，*侧栏_you:0*概况
 ---
 
-# Overview
+冲浪板跟随[192.168.0.0/16]
 
 :::tip
-Surfboard follow [Surge](https://nssurge.com/)'s profile format
+汹涌[简介格式](https://nssurge.com/)可以查看Surge的配置文件
 
-Surge's profile documentation can be viewed [here](https://manual.nssurge.com/)
+在这里[倪](https://manual.nssurge.com/)
 :::
 
-```ini
-#!MANAGED-CONFIG http://test.com/surfboard.conf interval=60 strict=true # subscribe profile url and auto update config
+```#！MANAGED-CONFIG http：//test. com/surfboard. CONF interval=60 strict=true#订阅配置文件url和自动更新配置
+侧栏_you:0
 [General]
-# Specify dns server used by application
-dns-server = system, 8.8.8.8, 8.8.4.4, 9.9.9.9:9953
+概况
+冲浪板跟随
 
-# Specify doh server used by application
-doh-server = https://9.9.9.9/dns-query
+汹涌
+简介格式
 
-# Specify route rule and domain rule, matching traffic will not be redirected or rejected.
 skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local, www.baidu.com //444
+#url-Test和手动节点速度测试使用的 Test url，你看你的网址
 
-# Test url used by url-test and manually node speed test. Redirect proxy will use this url.
 proxy-test-url = http://www.gstatic.com/generate_204
+#url-Test和手动节点速度测试使用的 Test url
 
-# Test url used by url-test and manually node speed test. Direct proxy will use this url.
 internet-test-url = http://www.gstatic.cn/generate_204
+#所有连接测试超时
 
-# Timeout for all connectivity test
+test-timeout = 5
 test-timeout = 5
 
-# Match domain won't get fake ip dns response
-always-real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com
+#使用 wifi Lio you wAlk you，bssid'F4-98-A0-73-3A-5B'
+#通过 ip[192.168.1.1]
 
-# Establish a http proxy server on your device and provide proxy service in specified ip
-http-listen = 0.0.0.0:1234
+域包含“谷歌”“你”“你”“你”“你”“你”“你”“你”“你”“你”“你”“你”
+#wireguard代理
 
-# Establish a socks5 proxy server on your device and provide proxy service in specified ip
-socks5-listen = 127.0.0.1:1235
+ProxyWireguard = wireguard, section-name = HomeServer
+#代理组，你看你的网址
 
-# If proxy not support udp relay, use DIRECT or REJECT instead
-udp-policy-not-supported-behaviour = DIRECT
+AutoTestGroup=url-Test，ProxySOCKS5，ProxySOCKS5 TLS，url=http://www.gstatic.com/generate_204，interval=600，公差=100，timeout=5，hidden=true
+#具有外部代理列表 url
 
 [Host]
-# map 'abc.com' to '1.2.3.4'
-abc.com = 1.2.3.4
+ExternalGroup = select, policy-path=https://test.com/nodes.txt, policy-regex-filter=HK-.*
+AutoExternalGroup = url-test, policy-path=https://test.com/nodes.txt
 
-# map any domain end with '.dev' to '6.7.8.9'
-*.dev = 6.7.8.9
+代理组，它包含[Proxy]部分下的所有代理
+AllProxies = select, include-all-proxies = true
 
-# alias 'bar.com' dns query result to 'foo.com'
-foo.com = bar.com
+代理组，它按名称包含其他组的所有代理
+IncludeOtherGroup = select, include-other-group = "SelectGroup, ExternalGroup", policy-regex-filter=Proxy.*
 
-# assign '8.8.8.8' as dns server for 'bar.com'
-bar.com = server:8.8.8.8
+#随机选择的代理组
+LoadBalanceGroup = load-balance, ProxyHTTP, ProxyHTTPS
 
 [Proxy]
-# build in policy
-On = direct
-Off = reject
+#流量不符合以上规则将被发送到“ProxyTrojan”
+PanelA = title="Panel Title", content="Panel Content\nSecondLine", style=info
+您可以继续阅读不同部分的详细定义
 
 # http proxy
 ProxyHTTP = http, 1.2.3.4, 443, username, password
@@ -77,10 +77,10 @@ ProxySOCKS5TLS = socks5-tls, 1.2.3.4, 443, username, password, skip-cert-verify=
 ProxySS = ss, 1.2.3.4, 8000, encrypt-method=chacha20-ietf-poly1305, password=abcd1234, udp-relay=false, obfs=http, obfs-host=www.google.com, obfs-uri=/
 
 # vmess proxy, tls and websocket supported, pure tcp is not supported
-ProxyVMess = vmess, 1.2.3.4, 8000, username=0233d11c-15a4-47d3-ade3-48ffca0ce119, udp-relay=false, ws=true, tls=true, ws-path=/v2, ws-headers=X-Header-1:value|X-Header-2:value, skip-cert-verify=true, sni=www.google.com, vmess-aead=true
+ProxySOCKS 5 TLS=SOCKS 5-TLS，1.2.3.4,443，用户名，youth-cert-verify=true，sni=www.google.com
 
-# trojan proxy, trojan grpc is not supported
-ProxyTrojan = trojan, 192.168.20.6, 443, password=password1, udp-relay=false, skip-cert-verify=true, sni=www.google.com
+#影子代理，您-
+ProxySS = ss, 1.2.3.4, 8000, encrypt-method=chacha20-ietf-poly1305, password=abcd1234, udp-relay=false, obfs=http, obfs-host=www.google.com, obfs-uri=/
 
 # wireguard proxy
 ProxyWireguard = wireguard, section-name = HomeServer
@@ -92,14 +92,14 @@ dns-server = 8.8.8.8
 mtu = 1280
 peer = (public-key = fWO8XS9/nwUQcqnkfBpKeqIqbzclQ6EKP20Pgvzwclg=, allowed-ips = 0.0.0.0/0, endpoint = 192.168.20.6:51820)
 
-[Proxy Group]
-# proxy group whose selected proxy can be changed manually
+[代理小组]
+#可以手动更改所选代理的代理组
 SelectGroup = select, ProxyHTTP, ProxyHTTPS, DIRECT, REJECT
 
-# proxy group whose selected proxy can be decided based on url test result automatically
-AutoTestGroup = url-test, ProxySOCKS5, ProxySOCKS5TLS, url=http://www.gstatic.com/generate_204, interval=600, tolerance=100, timeout=5, hidden=true
+#代理组，可以根据url测试结果自动决定所选代理
+AutoTestGroup=url-Test，ProxySOCKS5，ProxySOCKS5 TLS，url=http://www.gstatic.com/generate_204，interval=600，公差=100，timeout=5，hidden=true
 
-# proxy group with a external proxies list url
+#具有外部代理列表url的代理组
 ExternalGroup = select, policy-path=https://test.com/nodes.txt, policy-regex-filter=HK-.*
 AutoExternalGroup = url-test, policy-path=https://test.com/nodes.txt
 
@@ -119,16 +119,16 @@ FallbackGroup = fallback, ProxySOCKS5, ProxySOCKS5TLS, url=http://www.gstatic.co
 # domain exact match 'www.apple.com' will be redirected to proxy named 'ProxyHTTP' in [Proxy] section 
 DOMAIN,www.apple.com,ProxyHTTP
 
-# domain exact match 'www.google.com' will be redirected to proxy group named 'SelectGroup' in [Proxy Group] section
+代理组，您的代理
 DOMAIN,www.google.com,SelectGroup
 
-# domain ends with 'apple.com' will be redirected to 'Proxy', DNS query of this domain will triggered in the remote proxy
+AllProxies = select, include-all-proxies = true
 DOMAIN-SUFFIX,apple.com,Proxy,force-remote-dns
 
-# domain contains 'google' keyword will be redirected to 'Proxy', a fake ip will be returned in DNS query
+代理组，它按名称包含其他组的所有代理
 DOMAIN-KEYWORD,google,Proxy,enhanced-mode
 
-# destination ip match route '192.168.0.0/16' will be sent directly
+IncludeOtherGroup = select, include-other-group = "SelectGroup, ExternalGroup", policy-regex-filter=Proxy.*
 IP-CIDR,192.168.0.0/16,DIRECT
 
 # destination ip located in United State will be rejected
@@ -138,38 +138,38 @@ GEOIP,US,REJECT
 PROCESS-NAME,com.android.vending,Proxy  # android package name
 PROCESS-NAME,*google*,Proxy             # android package name wildcard rule
 
-# traffic match external rules defined in 'https://ruleset.com/cn' will be sent to 'ProxyVMess'
+侧栏_职位：0
 RULE-SET,https://ruleset.com/cn,ProxyVMess
 
-# traffic match external domain rules defined in 'https://domainset.com/ad' will be rejected'
+Off=拒绝
 DOMAIN-SET,https://domainset.com/ad,REJECT
 
-# traffic sent using wifi whose ssid name is 'CMCC' will be rejected
+#http代理
 SUBNET,SSID:CMCC,REJECT
 
-# traffic sent using wifi whose bssid is 'F4-98-A0-73-3A-5B' will be sent directly
+ProxyHTTP=HTTP，1.2.3.4，443，用户名，密码
 SUBNET,BSSID:F4-98-A0-73-3A-5B,DIRECT
 
-# traffic sent through a router whose ip is '192.168.1.1' will be sent directly
+#https代理
 SUBNET,ROUTER:192.168.1.1,DIRECT
 
-# traffic sent using wifi will be sent directly
+ProxyHTTPS=HTTPS，1.2.3.4，443，用户名，密码，skip-cert-verify=true，sni=www.google.com
 SUBNET,TYPE:WIFI,DIRECT
 
-# traffic sent using wired network will be sent directly
+#socks5代理
 SUBNET,TYPE:WIRED,DIRECT
 
-# traffic sent using mobile network will be sent through 'SelectGroup'
+ProxySOCKS5=SOCKS5，1.2.3.4，443，用户名，密码，udp-relay=false
 SUBNET,TYPE:CELLULAR,SelectGroup
 
-# traffic sent using mobile network whose MCC is 100 and MNC is 200, will be sent directly
+#socks5通过tls代理
 SUBNET,MCCMNC:100-200,DIRECT
 
-# traffic doesn't match rules above will be sent to 'ProxyTrojan'
+ProxySOCKS 5 TLS=SOCKS 5-TLS，1.2.3.4，443，用户名，密码，skip-cert-verify=true，sni=www.google.com
 FINAL,ProxyTrojan
 
 [Panel]
-PanelA = title="Panel Title", content="Panel Content\nSecondLine", style=info
+#shadowings代理，简单-支持obf
 ```
 
-You can read on for detailed definitions of different sections
+ProxySS = ss, 1.2.3.4, 8000, encrypt-method=chacha20-ietf-poly1305, password=abcd1234, udp-relay=false, obfs=http, obfs-host=www.google.com, obfs-uri=/
